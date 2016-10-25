@@ -49,7 +49,7 @@ extension CopyLabel {
     }
 
     override func canPerformAction(action: Selector, withSender sender: AnyObject?) -> Bool {
-        return action == #selector(NSObject.copy(_:))
+        return action == #selector(copy(_:))
     }
 
     override func canBecomeFirstResponder() -> Bool {

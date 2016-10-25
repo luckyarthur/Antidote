@@ -6,12 +6,12 @@ import Foundation
 import QuickLook
 
 private class FilePreviewItem: NSObject, QLPreviewItem {
-    @objc var previewItemURL: NSURL
+    @objc var previewItemURL: NSURL?
     @objc var previewItemTitle: String?
 
     init(url: NSURL, title: String?) {
         self.previewItemURL = url
-            self.previewItemTitle = title
+        self.previewItemTitle = title
     }
 }
 

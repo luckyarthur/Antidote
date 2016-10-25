@@ -15,13 +15,13 @@ extension UIImage {
         UIGraphicsBeginImageContext(rect.size)
         let context = UIGraphicsGetCurrentContext()
 
-        CGContextSetFillColorWithColor(context, color.CGColor)
-        CGContextFillRect(context, rect)
+        CGContextSetFillColorWithColor(context!, color.CGColor)
+        CGContextFillRect(context!, rect)
 
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
 
-        return image
+        return image!
     }
 
     class func templateNamed(named: String) -> UIImage {
@@ -34,7 +34,7 @@ extension UIImage {
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
 
-       return newImage
+       return newImage!
     }
 
     func cropWithRect(rect: CGRect) -> UIImage {
@@ -73,7 +73,7 @@ extension UIImage {
             rect.size.height *= scale
         }
 
-        let imageRef = CGImageCreateWithImageInRect(self.CGImage, rect)!
+        let imageRef = CGImageCreateWithImageInRect(self.CGImage!, rect)!
         return UIImage(CGImage: imageRef, scale: scale, orientation: imageOrientation)
     }
 

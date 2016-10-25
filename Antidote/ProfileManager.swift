@@ -28,7 +28,7 @@ class ProfileManager {
 
         if let url = copyFromURL {
             let saveURL = NSURL(fileURLWithPath: path).URLByAppendingPathComponent(Constants.ToxFileName)
-            try fileManager.moveItemAtURL(url, toURL: saveURL)
+            try fileManager.moveItemAtURL(url, toURL: saveURL!)
         }
 
         reloadProfileNames()

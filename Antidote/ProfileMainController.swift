@@ -240,7 +240,7 @@ private extension ProfileMainController {
         repeat {
             UIGraphicsBeginImageContext(imageSize)
             tempImage.drawInRect(CGRect(origin: CGPointZero, size: imageSize))
-            tempImage = UIGraphicsGetImageFromCurrentImageContext()
+            tempImage = UIGraphicsGetImageFromCurrentImageContext()!
             UIGraphicsEndImageContext()
 
             guard let theData = UIImagePNGRepresentation(tempImage) else {

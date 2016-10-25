@@ -125,6 +125,6 @@ private extension AvatarManager {
 
         UIGraphicsEndImageContext()
 
-        return image
+        return image!
     }
 }

@@ -6,6 +6,7 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 - Removed voip flag.
 - Always enabling IPv6. Removed IPv6 option from settings.
+- Migrating to Swift 2.3 & Xcode 8.
 
 ### Fixed
 - Links are not visible with new bubble colors [#242](https://github.com/Antidote-for-Tox/Antidote/issues/242).

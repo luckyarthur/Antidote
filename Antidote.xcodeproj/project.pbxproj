@@ -462,6 +462,13 @@
 			remoteGlobalIDString = 1164762E19794D3300DB20B8;
 			remoteInfo = Antidote;
 		};
+		11FE8D711DC016B1000ACFA7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1173EFC81BC5C6B300B88B7B /* SnapKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 56A0DC091C859E30005973AB;
+			remoteInfo = "Example-iOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -674,6 +681,7 @@
 		11FC10561D32E54A00CE863E /* Results.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Results.swift; sourceTree = "<group>"; };
 		11FC10591D32EED000CE863E /* ResultsChange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsChange.swift; sourceTree = "<group>"; };
 		11FC105C1D32F29700CE863E /* OCTSubmanagerObjectsExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCTSubmanagerObjectsExtension.swift; sourceTree = "<group>"; };
+		11FE8D781DC016F1000ACFA7 /* Antidote.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Antidote.entitlements; sourceTree = "<group>"; };
 		2D5B916CEDBEC1B69CD1EFA4 /* Pods-Antidote.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Antidote.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Antidote/Pods-Antidote.debug.xcconfig"; sourceTree = "<group>"; };
 		43C533DEE94E80C981FEC348 /* Pods-AntidoteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AntidoteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-AntidoteTests/Pods-AntidoteTests.debug.xcconfig"; sourceTree = "<group>"; };
 		72586F4D098584EF43024224 /* libPods-AntidoteTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AntidoteTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -816,6 +824,7 @@
 		1164763819794D3300DB20B8 /* Antidote */ = {
 			isa = PBXGroup;
 			children = (
+				11FE8D781DC016F1000ACFA7 /* Antidote.entitlements */,
 				F902D28D1ADED27A0070A3F5 /* Application */,
 				1193AB561C1F565B006AA9E5 /* Cells */,
 				1173F06C1BC5D9B000B88B7B /* Classes */,
@@ -889,6 +898,7 @@
 				1173EFD41BC5C6B300B88B7B /* SnapKit iOS Tests.xctest */,
 				113F02E91CAFC9830009ABE1 /* SnapKit tvOS Tests.xctest */,
 				1173EFD61BC5C6B300B88B7B /* SnapKit OSX Tests.xctest */,
+				11FE8D721DC016B1000ACFA7 /* Example-iOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1220,9 +1230,17 @@
 				TargetAttributes = {
 					1164762E19794D3300DB20B8 = {
 						DevelopmentTeam = NHVF8NSG3J;
+						LastSwiftMigration = 0810;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					1173F0551BC5D94400B88B7B = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -1356,6 +1374,13 @@
 			fileType = wrapper.cfbundle;
 			path = Tests.xctest;
 			remoteRef = 1173EFF11BC5CF5D00B88B7B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		11FE8D721DC016B1000ACFA7 /* Example-iOS.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Example-iOS.app";
+			remoteRef = 11FE8D711DC016B1000ACFA7 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1969,6 +1994,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
+				CODE_SIGN_ENTITLEMENTS = Antidote/Antidote.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
@@ -1984,6 +2010,7 @@
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Antidote/Antidote-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1996,6 +2023,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_STATIC_ANALYZER_MODE = deep;
+				CODE_SIGN_ENTITLEMENTS = Antidote/Antidote.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				ENABLE_BITCODE = NO;
@@ -2010,6 +2038,7 @@
 				PROVISIONING_PROFILE = "";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "Antidote/Antidote-Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
@@ -2022,6 +2051,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -2034,6 +2064,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "AntidoteTests/AntidoteTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Antidote.app/Antidote";
 			};
 			name = Debug;
@@ -2045,6 +2076,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -2056,6 +2088,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = dvor.AntidoteTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "AntidoteTests/AntidoteTests-Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Antidote.app/Antidote";
 			};
 			name = Release;
